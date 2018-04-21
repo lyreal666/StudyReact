@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>react初步</title>
+    <script src="../built/react.js"></script>
+    <script src="../built/react-dom.js"></script>
+    <script src="../built/browser.min.js"></script>
+</head>
+<body>
+<!--
+1.，不能用箭头函数
+2.，render函数只能有一个顶级标签
+3， 给组件添加属性时不能添加js关键字，比如class必须写className,for边htmlFor,还要符合便命名约定
+-->
+<div id="example"></div>
+<script type="text/babel">
+    let HelloMessage = React.createClass({
+        render: function() {
+            return <h1> Hello, {this.props.name}</h1>
+        }
+    });
+
+    ReactDOM.render(<HelloMessage name="ly"/>, document.getElementById('example'));
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsx语法</title>
+    <script src="../built/react.js"></script>
+    <script src="../built/react-dom.js"></script>
+    <script src="../built/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    let names = ['ly', 'zjx', 'fl', 'rbd'];
+    ReactDOM.render(
+        <div>
+            {
+                names.map((name) => {
+                    return <h2>Hello, {name}!</h2>
+                })
+            }
+        </div>,
+        document.getElementById('example')
+    )
+</script>
+</body>
+</html>

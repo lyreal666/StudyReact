@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array变量</title>
+    <script src="../built/react.js"></script>
+    <script src="../built/react-dom.js"></script>
+    <script src="../built/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    let names = ['ly', 'zjx', 'fl', 'rbd'];
+    let words = [<h2>ly is awosome!</h2>, <h2>ly is learning react</h2>]
+    ReactDOM.render(
+        <div>
+            <div>{names}</div>
+            <div>{words}</div>
+        </div>,
+        document.getElementById('example')
+    )
+</script>
+</body>
+</html>
